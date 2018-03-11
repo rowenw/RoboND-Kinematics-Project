@@ -148,7 +148,7 @@ def handle_calculate_IK(req):
             R3_6 = dh_build_R3_6(Rrpy).evalf(subs={q1:theta1, q2:theta2, q3:theta3})
             theta4 = atan2(R3_6[2, 2], -R3_6[0, 2])
             theta5 = atan2(sqrt(R3_6[1, 0]**2 + R3_6[1, 1]**2), R3_6[1, 2])
-            theta6 = atan2(R3_6[1, 1], R3_6[1, 0])
+            theta6 = atan2(-R3_6[1, 1], R3_6[1, 0])
 
             # Populate response for the IK request
             # In the next line replace theta1,theta2...,theta6 by your joint angle variables
