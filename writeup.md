@@ -62,14 +62,14 @@ Links | alpha(i-1) | a(i-1) | d(i) | theta(i)
 
 2) I use two steps to build the transformation matrix from Frame_0 to Frame_EE. The first step is build single transformation matrix from frame i-1 to frame i.
 
-	def dh_trans_unit(p, a, d, q): #p as alpha, q as theta
-	    ret = Matrix([
-	        [       cos(q),       -sin(q),      0,          a], 
-	        [sin(q)*cos(p), cos(q)*cos(p), -sin(p), -sin(p)*d],
-	        [sin(q)*sin(p), cos(q)*sin(p),  cos(p),  cos(p)*d],
-	        [            0,             0,       0,         1]])
+    def dh_trans_unit(p, a, d, q): #p as alpha, q as theta
+	     ret = Matrix([
+	         [       cos(q),       -sin(q),      0,          a], 
+	         [sin(q)*cos(p), cos(q)*cos(p), -sin(p), -sin(p)*d],
+	         [sin(q)*sin(p), cos(q)*sin(p),  cos(p),  cos(p)*d],
+	         [            0,             0,       0,         1]])
 	    
-	    return ret 
+	     return ret 
 	    
 Then the follow code snippet was used to build the transformation matrix from Frame_0 to Frame_EE.
 
