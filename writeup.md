@@ -11,6 +11,11 @@
 
 [image1]: ./misc_images/dh.png
 [image2]: ./misc_images/q123.png
+[image3]: ./misc_images/demo1.png
+[image4]: ./misc_images/demo2.png
+[image5]: ./misc_images/demo3.png
+[image6]: ./misc_images/demo4.png
+[image7]: ./misc_images/demo5.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -183,3 +188,29 @@ From the simplified R3_6 matrix, easy to get the following equations.
             theta4 = atan2(R3_6[2, 2], -R3_6[0, 2])
             theta5 = atan2(sqrt(R3_6[1, 0]**2 + R3_6[1, 1]**2), R3_6[1, 2])
             theta6 = atan2(-R3_6[1, 1], R3_6[1, 0])
+          
+      
+Following is some images I captured when I was running the project.
+
+1) Try to grasp the object.
+
+![alt text][image3]
+
+2) Retrive the object.
+
+![alt text][image4]
+
+3) Calculate inverse kinematics.
+
+![alt text][image5]
+
+4) Reach the can.
+
+![alt text][image6]
+
+5) Release the object.
+
+![alt text][image7]
+
+
+Improvement could be made for this project furture. The main issue is the time cost when calculating inverse kinematics. It cost me about 5 mins on my computer. Skills like using ```tranpose R0_3``` instead of ```inverse R0_3```, using numpy instead of sympy, using saving and loading matrix to avoid duplicate computing would improve the efficiency.
